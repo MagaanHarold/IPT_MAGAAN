@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculator Dark & Light Mode</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s, color 0.3s;
+  color: #333;
+  
+}
+body.dark-mode {
+  background-color: #333;
+  color: white;
+  
+}
+
+.calculator {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+  transition: background-color 0.3s, color .3s;
+  
+}
+.dark-mode .calculator input {
+  background-color: white;
+  color: black;
+  border: 1px solid #555;
+  
+}
+
+.calculator button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  
+}
+
+.calculator button:hover {
+  background-color: #218838;
+  
+}
+
+.toggle-button {
+  margin-bottom: 10px;
+  padding: 5px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  
+}
+
+.toggle-button:hover {
+  background-color: darkslateblue;
+  
+}
+
+.result {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  justify-content: center;
+  
+}
+  </style>
+</head>
+
+<body>
+  <div class="calculator">
+        <h2>Input Two Numbers</h2>
+        <input type="number" id="number1" placeholder="Enter first number" required>
+        <input type="number" id="number2" placeholder="Enter second number" required><br><br>
+        <button onclick="addNumbers()">Add</button><br><br>
+        <button class="toggle-button" onclick="toggleDarkMode()">Dark/Light Mode</button>
+        <div class="result" id="result"></div>
+    </div>
+</body>
+    <script>
+        function addNumbers() {
+  const num1 = parseFloat(document.getElementById('number1').value);
+  
+  const num2 = parseFloat(document.getElementById('number2').value);
+  
+if (!isNaN(num1) && !isNaN(num2)) {
+  const sum = num1 + num2;
+  document.getElementById('result').innerText = "Result: " + sum;
+  
+} else 
+{
+  document.getElementById('result').innerText = "Please enter valid numbers.";
+  }
+}
+
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+  document.querySelector('.calculator').classList.toggle('dark-mode');
+  
+}
+    </script>
+</html>

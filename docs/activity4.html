@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* General Styles */
+body {
+    background-image: url("https://i.pinimg.com/736x/0f/39/46/0f39460ecbc7a01d7e6082d5b188b1e3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .logo {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+  }
+  .logo:hover{
+    color: blue;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+  }
+  nav a:hover{
+    color:blue;
+  }
+  
+  /* Main Section */
+  main {
+    padding: 20px;
+  }
+  
+  .about, .skills, .image-section {
+    position: relative;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+  }
+  
+  /* About Section */
+  h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: x-large;
+    }
+  h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  h5{
+  font-size: 30px;
+  text-decoration: black;
+  text-align: right;
+  }
+  p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  align-items: right;
+  color: black;
+  font-size: large;
+  }
+  .text-field {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 60%;
+    height: 65vh;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  /* Skills Section */
+  .skill-container {
+    display: flex;
+    justify-content: space-evenly;
+    right: 40%;
+  }
+  
+  .skill {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 10px;
+    background-color: transparent;
+    border: 1px solid #000;
+    border-radius: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Image Section */
+  .image-container {
+  position: absolute;
+  right: 100px;
+  
+  }
+  
+  .image-container img {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+  
+  /* Footer */
+  footer {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .footer-text {
+    text-align: left;
+  }
+  .card {
+    width: 500px;
+    height: 610px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: center;
+    right: 10%;
+  }
+  .card-img{
+    width: 300px;
+    height: 300px;
+    object-fit: auto;
+    display: flex;
+    float: left;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  .card-content{
+    padding: 16px;
+  
+  }
+  .card-content p{
+    font-size: 25px;
+    color: black;
+  }
+  .container{
+    width: 100%;
+    height: 100vh;
+  }
+  .slides{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+  .slides h2{
+    font-size: 50px;
+  }
+  section{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: transparent;
+    min-height: 100%;
+  }
+  section:nth-child(odd){
+    background-color: transparent;
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+  h6 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 20px;
+  }
+  p1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 15px;
+  }
+  p2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 15px;
+  }
+  p3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 15px;
+  }
+  .social-icon1 {
+    color: blue;
+    font-size: 50px;
+  }
+  .social-icon2 {
+    color: dark orange, orange, royal blue, blue, purple, dark pink, purple-red, red, yellow, light yellow;
+    font-size: 50px;
+  }
+    </style>
+</head>
+	 <header>
+        <a href="#home" class="logo">HM</a>
+        <nav>
+            <a href="#home" class="active"><strong>Home</a></strong>
+            <a href="#about"><strong>About</a></strong>
+            <a href="#skills"><strong>Skills</a></strong>
+            <a href="#contact"><strong>Contact</a></strong>
+        </nav>
+    </header>
+    
+<body>
+    <main>
+        <h2>Welcome to my Portfolio</h2><br>
+    </div>
+</div>
+</section>
+<section id="about">
+<div class="container">
+    <div class="slides slide2">
+         <div class="text-field">
+            <h3>About Me</h3>
+            <image src="image/HaroldPOGI.jpg" alt="Card Image" class="card-img">
+            <p>I'm Harold Magaan, a 3rd year student currently studying BS Information Technology at City of Malabon University.
+                I still appreciate my journey into programming, and I continued exploring the basics of coding until I master it.</p>
+                <p>However, I learn some fundamental concepts like HTML, CSS, and JavaScript, and I enjoy solving problems and building simple projects.
+                I’m excited to keep learning and improve my skills in programming.
+            </p>
+        </div>
+    </div>
+</div>
+</section>
+<section id="skills">
+<div class="container">
+    <div class="slides slide3">
+        <div class="card">
+            <div class="card-content">
+                <section class="skills">
+                    <div class="skill-container">
+                        <div class="skill"><b>HTML Expertise</div></b>
+                        <div class="skill"><b>CSS Novice</div></b>
+                        <div class="skill"><b>JavaScript Novice</div></b>
+                    </div>
+                    <h3>Skills</h3>
+                    <h4>HTML Expertise</h4><p1>I am a skilled HTML with a strong foundation in creating clean, efficient, and responsive web designs. I specialize in structuring web content, adhering to modern web standards, and ensuring cross-browser compatibility.</p1><br>
+                    <h4>CSS Novice</h4><p2>I am a CSS novice currently building my skills in styling and designing web pages. I have a foundational understanding of CSS properties, selectors, and layouts, and I'm eager to deepen my knowledge of responsive design and modern CSS techniques.</p2>
+                    <h4>JavaScript Novice</h4><p3>I am a JavaScript novice with a growing interest in web development. I have a basic understanding of JavaScript syntax, variables, functions, and events, and I’m eager to learn more about how it brings interactivity and functionality to websites.</p3>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+</main>
+</body>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-text">Footer Text</div>
+            <div class="footer-images">
+                <img src="path/to/image1.jpg" alt="Image 1">
+                <img src="path/to/image2.jpg" alt="Image 2">
+            </div>
+            <div class="footer-text">Footer Text</div>
+        </div>
+    </footer>
+</html>
